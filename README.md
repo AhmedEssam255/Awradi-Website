@@ -1,1 +1,1 @@
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/AhmedEssam255/Awradi-Website)
+<a href="https://deepwiki.com/AhmedEssam255/Awradi-Website"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
