@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #f0faf2;
+  --color-primary-100: #dcf2e1;
+  --color-primary-200: #bce5c8;
+  --color-primary-300: #8fd1a1;
+  --color-primary-400: #5fb87a;
+  --color-primary-500: #3a9d5c;
+  --color-primary-600: #2d7f4a;
+  --color-primary-700: #23663c;
+  --color-primary-800: #1d5232;
+  --color-primary-900: #184228;
+  --color-primary-950: #0d2616;
+
+  --color-surface-50: #f6faf6;
+  --color-surface-100: #ecf3ec;
+  --color-surface-200: #d9e6d9;
+  --color-surface-300: #bfcfbf;
+  --color-surface-400: #9ab39a;
+  --color-surface-500: #769176;
+  --color-surface-600: #5a735a;
+  --color-surface-700: #455a45;
+  --color-surface-800: #334233;
+  --color-surface-900: #232e23;
+  --color-surface-950: #151c15;
+
+  --shadow-soft: 0 1px 3px rgba(20, 60, 30, 0.06), 0 1px 2px rgba(20, 60, 30, 0.03);
+  --shadow-card: 0 2px 8px rgba(20, 60, 30, 0.07), 0 1px 3px rgba(20, 60, 30, 0.04);
+  --shadow-elevated: 0 8px 24px rgba(20, 60, 30, 0.09), 0 3px 8px rgba(20, 60, 30, 0.05);
+  --shadow-inner-soft: inset 0 1px 2px rgba(20, 60, 30, 0.03);
+
+  --radius-soft: 0.75rem;
+  --radius-card: 1rem;
+  --radius-pill: 9999px;
+
+  --font-amiri: "Amiri Quran", "Noto Sans Arabic", system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --background: 248, 250, 247;
+  --foreground: 20, 40, 24;
+  --card-bg: 255, 255, 255;
+  --card-border: 200, 220, 205;
+  --muted: 90, 120, 95;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 12, 20, 14;
+    --foreground: 230, 240, 232;
+    --card-bg: 20, 32, 22;
+    --card-border: 45, 65, 50;
+    --muted: 150, 180, 155;
+  }
+}
+
+@layer base {
+  * {
+    border-color: rgb(var(--card-border));
+  }
+
+  body {
+    background: linear-gradient(160deg, rgb(244, 250, 244) 0%, rgb(232, 244, 234) 50%, rgb(220, 238, 224) 100%) !important;
+    color: rgb(var(--foreground)) !important;
+    font-family: var(--font-amiri);
+    min-height: 100vh;
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: linear-gradient(160deg, rgb(8, 18, 10) 0%, rgb(12, 24, 14) 50%, rgb(16, 30, 18) 100%) !important;
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
